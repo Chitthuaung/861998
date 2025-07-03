@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>အကောင်းဆုံးသူကမင်းကိုချစ်တဲ့သူ</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .login-container {
+      background: url('back.jpg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .login-box {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+    .login-box h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    .login-box input[type="password"] {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .login-box button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ff6f61;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .gallery {
+      padding: 40px;
+      display: none;
+    }
+    .gallery h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .photos {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .photos img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container" id="loginPage">
+    <div class="login-box">
+      <h2>Enter Password</h2>
+      <input type="password" id="password" placeholder=" write 6-letter BIRTHDAY" axlength="6">
+      <button onclick="checkPassword()">Enter</button>
+    </div>
+  </div> 
+  
+  <div class="gallery" id="galleryPage">
+    <h2>အချစ်မှာ ဖူးစာတွေ 
+    ရေစက်တွေမလိုဘူး "ရဲရဲ့"
+    ဝဋ်ကျွေးရှိရင်လည်း 
+    ချစ်မိတာပါဘဲ</h2>
+    
+    
+    <div class="photos">
+  <img src="a1.jpg">
+ <img src="a2.jpg">
+ <img src="a3.jpg">
+ <img src="a4.jpg">
+ <img src="a5.jpg">
+ <img src="a6.jpg">
+ <img src="a7.jpg">
+ <img src="a8.jpg">
+ <img src="a9.jpg">
+ <img src="a10.jpg">
+ <img src="a11.jpg">
+ <img src="a12.jpg">
+ <img src="a13.jpg">
+ <img src="a14.jpg">
+ <img src="a15.jpg">
+ <img src="a16.jpg">
+ <img src="a17.jpg">
+ <img src="a18.jpg">
+ <img src="a19.jpg">
+ <img src="a20.jpg">
+ 
+      
+      
+      
+      
+    </div>
+  </div>  <script>
+    function checkPassword() {
+      const passwordInput = document.getElementById('password').value;
+      
+      
+       // You can change this to any 6-letter password
+       
+const correctPassword = "861998";
+
+      if (passwordInput === correctPassword) {
+        document.getElementById('loginPage').style.display = 'none';
+        document.getElementById('galleryPage').style.display = 'block';
+      } else {
+        alert("Incorrect password. Please try again.");
+      }
+    }
+  </script></body>
+</html>
